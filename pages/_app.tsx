@@ -17,7 +17,7 @@ export default function MyApp({Component, pageProps}: AppProps) {
                     Toggle Theme
                 </Button>
             </Box>
-            <Container>
+            <Container sx={{ pb: 2 }}>
                 <Component {...pageProps} />
             </Container>
         </ThemeProvider>
