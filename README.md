@@ -27,4 +27,4 @@ A simple Next.js application to display sports match results using Material UI.
 
 ## Live Demo
 
-You can view the live version of the app here: [Sports Dashboard on Firebase](https://sportsdashboard.web.app)
+You can view the live version of the app here: [Sports Dashboard on Firebase](https://sports-dashboard-nine.vercel.app)

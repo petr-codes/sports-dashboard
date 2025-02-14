@@ -106,7 +106,7 @@ export default function ResultsPage({ results }: ResultsPageProps) {
 export const getServerSideProps: GetServerSideProps = async () => {
     const baseUrl =
         process.env.NODE_ENV === 'production'
-            ? 'https://sportsdashboard.web.app'
+            ? 'https://sports-dashboard-nine.vercel.app'
             : 'http://localhost:3000';
 
     const response: Response = await fetch(`${baseUrl}/api/results`);
