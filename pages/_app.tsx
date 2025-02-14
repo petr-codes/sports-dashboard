@@ -1,6 +1,25 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import {createTheme, ThemeProvider, Container, CssBaseline, Box, Button} from '@mui/material';
+import React, {useState} from 'react';
+import {AppProps} from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+export default function MyApp({Component, pageProps}: AppProps) {
+    const [darkMode, setDarkMode] = useState(false);
+
+    const theme = createTheme({
+        palette: {mode: darkMode ? 'dark' : 'light'},
+    });
+
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline/>
+            <Box sx={{display: "flex", justifyContent: "flex-end", p: 2}}>
+                <Button variant="contained" onClick={() => setDarkMode((prev) => !prev)}>
+                    Toggle Theme
+                </Button>
+            </Box>
+            <Container>
+                <Component {...pageProps} />
+            </Container>
+        </ThemeProvider>
+    );
 }
