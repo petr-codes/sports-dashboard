@@ -70,11 +70,11 @@ export default function ResultsPage({ results }: ResultsPageProps) {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Team 1 Name</TableCell>
-                            <TableCell>Team 1 Score</TableCell>
-                            <TableCell>Team 2 Score</TableCell>
-                            <TableCell>Team 2 Name</TableCell>
-                            <TableCell>
+                            <TableCell sx={{ fontWeight: 'bold' }}>Team 1 Name</TableCell>
+                            <TableCell sx={{ fontWeight: 'bold' }}>Team 1 Score</TableCell>
+                            <TableCell sx={{ fontWeight: 'bold' }}>Team 2 Score</TableCell>
+                            <TableCell sx={{ fontWeight: 'bold' }}>Team 2 Name</TableCell>
+                            <TableCell sx={{ fontWeight: 'bold' }}>
                                 <TableSortLabel
                                     active={orderBy === 'date'}
                                     direction={orderBy === 'date' ? order : 'asc'}
